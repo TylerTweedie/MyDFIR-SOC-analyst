@@ -4,8 +4,9 @@
 
 I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticsearch, Logstash, and Kibana) to analyze and investigate logs from a virtual machine. Throughout the challenge, I identified and examined various simulated cyber attacks, gaining hands-on experience in threat detection, log correlation, and incident response within a SIEM environment.
 
+<br>
+
 ### Skills Learned
-[Bullet Points - Remove this afterwards]
 
 🛡️ Log Analysis & Correlation – Interpreted system, network, and application logs to detect suspicious activity.
 
@@ -25,6 +26,8 @@ I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticse
 
 🧰 Security Use Case Development – Designed basic detection rules and alerts based on observed patterns and behaviors.
 
+<br>
+
 ### 🛠️ Tools & Technologies Used
 
 Elasticsearch – Powerful search and analytics engine for indexing and querying log data.
@@ -42,6 +45,8 @@ Syslog / Auditd – Log sources for system activity and audit trails.
 VULTR – Cloud infrastructure provider used to host virtual machines and lab environment.
 
 SIEM Concepts – Worked within the framework of Security Information and Event Management.
+
+<br>
 
 ## Steps
 # Building a SOC + Honeynet in Azure (Live Traffic)
