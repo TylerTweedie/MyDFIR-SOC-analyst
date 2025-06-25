@@ -1,25 +1,47 @@
-# PROJECTNAME
+# MyDFIR SOC Analyst challenge
 
 ## Objective
-[Brief Objective - Remove this afterwards]
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticsearch, Logstash, and Kibana) to analyze and investigate logs from a virtual machine. Throughout the challenge, I identified and examined various simulated cyber attacks, gaining hands-on experience in threat detection, log correlation, and incident response within a SIEM environment.
 
 ### Skills Learned
 [Bullet Points - Remove this afterwards]
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+🛡️ Log Analysis & Correlation – Interpreted system, network, and application logs to detect suspicious activity.
 
-### Tools Used
-[Bullet Points - Remove this afterwards]
+🔍 Threat Hunting – Proactively searched for indicators of compromise (IOCs) using Kibana visualizations and queries.
 
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+🧠 SIEM Proficiency – Gained hands-on experience with the ELK stack (Elasticsearch, Logstash, Kibana) in a security context.
+
+🚨 Attack Detection – Identified and investigated simulated attacks such as brute force attempts, malware infections, and privilege escalation.
+
+🖥️ Incident Response – Practiced triaging and documenting incidents based on log evidence and alert patterns.
+
+🗂️ Data Parsing & Normalization – Used Logstash to ingest and structure raw log data for analysis.
+
+📊 Dashboard Creation – Built and customized Kibana dashboards to monitor system activity and visualize trends.
+
+⏱️ Time-based Analysis – Conducted timeline investigations to trace attacker behavior across different stages.
+
+🧰 Security Use Case Development – Designed basic detection rules and alerts based on observed patterns and behaviors.
+
+### 🛠️ Tools & Technologies Used
+
+Elasticsearch – Powerful search and analytics engine for indexing and querying log data.
+
+Logstash – Data processing pipeline used to ingest, parse, and transform logs.
+
+Kibana – Visualization tool used to analyze and explore log data via dashboards and queries.
+
+Beats (Filebeat / Packetbeat) – Lightweight log shippers used to send logs and network data to Logstash or Elasticsearch.
+
+Linux (Ubuntu/Debian VM) – Operating system used as the target environment for log generation and attack simulation.
+
+Syslog / Auditd – Log sources for system activity and audit trails.
+
+VULTR – Cloud infrastructure provider used to host virtual machines and lab environment.
+
+SIEM Concepts – Worked within the framework of Security Information and Event Management.
 
 ## Steps
 # Building a SOC + Honeynet in Azure (Live Traffic)
