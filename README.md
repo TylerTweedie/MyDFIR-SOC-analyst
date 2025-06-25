@@ -30,21 +30,25 @@ I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticse
 
 ### 🛠️ Tools & Technologies Used
 
-Elasticsearch – Powerful search and analytics engine for indexing and querying log data.
+🔎 Elasticsearch – Search and analytics engine for indexing and querying log data.
 
-Logstash – Data processing pipeline used to ingest, parse, and transform logs.
+🔄 Logstash – Data processing pipeline for ingesting, parsing, and transforming logs.
 
-Kibana – Visualization tool used to analyze and explore log data via dashboards and queries.
+📊 Kibana – Visualization tool for analyzing log data and building dashboards.
 
-Beats (Filebeat / Packetbeat) – Lightweight log shippers used to send logs and network data to Logstash or Elasticsearch.
+📦 Beats (Filebeat / Packetbeat) – Lightweight agents used to forward logs and network data.
 
-Linux (Ubuntu/Debian VM) – Operating system used as the target environment for log generation and attack simulation.
+🐧 Linux (Ubuntu/Debian VM) – Operating system used to simulate attacks and generate log data.
 
-Syslog / Auditd – Log sources for system activity and audit trails.
+📝 Syslog / Auditd – System logging and auditing tools used as log sources.
 
-VULTR – Cloud infrastructure provider used to host virtual machines and lab environment.
+🎯 Kali Linux – Used for simulating attacks and generating malicious traffic.
 
-SIEM Concepts – Worked within the framework of Security Information and Event Management.
+☁️ VULTR – Cloud infrastructure provider used to host virtual machines and lab environment.
+
+💻 VirtualBox / VMware (optional) – Local virtualization platforms used if applicable.
+
+🛡️ SIEM Concepts – Applied Security Information and Event Management techniques in a practical setting.
 
 <br>
 
