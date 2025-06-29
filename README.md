@@ -46,7 +46,7 @@ I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticse
 
 ☁️ VULTR – Cloud infrastructure provider used to host virtual machines and lab environment.
 
-💻 VirtualBox / VMware (optional) – Local virtualization platforms used if applicable.
+💻 VMware – Local virtualization.
 
 🛡️ SIEM Concepts – Applied Security Information and Event Management techniques in a practical setting.
 
