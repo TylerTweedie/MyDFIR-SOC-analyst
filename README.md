@@ -101,6 +101,28 @@ I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticse
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2012%20-%20Ubuntu%20server%20install.png?raw=true)
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2013%20-%20linux%20integration.png?raw=true)
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2013%20-%20%20adding%20Ubuntu%20Agent.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2013%20-%20filtering%20logs%20for%20Linux%20machine.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2013%20-%20Authentication%20failures%20from%20170.231.48.3%20.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2014%20-%20Failed%20events.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2014%20-%20Defining%20the%20query%20.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2014%20-%20added%20query%20and%20added%20field%20in%20for%20map.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2014%20-%20troubleshot%20by%20adding%20by%20iso%20code%20.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2016%20filtering%20for%20Event%20codes%204625-%20might%20be%20where%20I%20screwed%20up%20space%20after%20colon%20I%20believe.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2016%20-%20First%20alert%20after%20making%20rule.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2016%20-%20Creating%20a%20rule%20to%20see%20failed%20authentiations%20for%20Root.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2016%20-%20Rule%20created.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2016%20-%20Rule%20for%20administrator%20and%204625%20event%20code.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2017%20-%20failed%20RDP%20authentication%20map.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2017%20-%20Creating%20a%20table%20by%20dropping%20filters%20.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2017%20-%20changed%20to%20top%2010%20values%20for%20user.name%20source%20IP%20and%20source%20Geo.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20Installing%20Kali%20Linux.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20Successfully%20SSH%20into%20Mythic%20or%20Kali.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20Mythic%20install%20via%20CLI.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20Made%20Docker%20container%20.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20Able%20to%20access%20Mythic%20login%20screen.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20sucessfully%20logged%20in%20to%20Mytic%20server.png?raw=true)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20Mythic%20Dashboard.png?raw=true)
+
 ## Introduction
 
 In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
