@@ -54,7 +54,7 @@ I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticse
 
 ## Steps
 # Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/VULTR%20VPC%20Creation.png?raw=true)
 
 ## Introduction
 
