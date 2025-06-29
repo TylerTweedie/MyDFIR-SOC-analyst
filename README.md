@@ -36,11 +36,9 @@ I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticse
 
 📊 Kibana – Visualization tool for analyzing log data and building dashboards.
 
-📦 Beats (Filebeat / Packetbeat) – Lightweight agents used to forward logs and network data.
+🐧 Linux (Ubuntu VM) – Operating system used to simulate attacks and generate log data.
 
-🐧 Linux (Ubuntu/Debian VM) – Operating system used to simulate attacks and generate log data.
-
-📝 Syslog / Auditd – System logging and auditing tools used as log sources.
+📝 Syslog – System logging and auditing tools used as log sources.
 
 🎯 Kali Linux – Used for simulating attacks and generating malicious traffic.
 
