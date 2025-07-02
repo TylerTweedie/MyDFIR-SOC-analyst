@@ -1,4 +1,18 @@
-# MyDFIR SOC Analyst challenge
+# MyDFIR SOC Analyst Challenge
+
+<br>
+
+## Introduction
+
+Over the course of 30 days, I completed a hands-on SOC Analyst Challenge focused on log analysis, threat detection, and incident response using the ELK Stack (Elasticsearch, Logstash, and Kibana). Working within a simulated SIEM environment hosted on a cloud-based virtual machine, I analyzed system, network, and application logs to detect and investigate various cyber attack scenarios. This included identifying brute force attempts, malware infections, and privilege escalation activities. Throughout the challenge, I gained practical experience in:
+Log correlation and threat hunting using Kibana visualizations and queries
+Incident triage and documentation based on log evidence and alert patterns
+Ingesting and structuring raw logs with Logstash for analysis
+Building interactive dashboards and conducting time-based investigations
+Developing basic detection rules and security use cases
+Tools and technologies used included Ubuntu, Kali Linux, VMware, VULTR, Syslog, and core SIEM concepts—providing a comprehensive, real-world foundation in cybersecurity monitoring and analysis.
+
+<br>
 
 ## Objective
 
@@ -51,18 +65,67 @@ I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticse
 <br>
 
 ## Steps
-# Building a SOC + Honeynet in Azure (Live Traffic)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/VULTR%20VPC%20Creation.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20VPC%20IP%20172.31.0.3.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/VPC%20Server%20Specs.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/VPC%20Server%20Specs.png?raw=true)
+# 30 Day SOC Analyst Challenge
+
+<p align="center">
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20VPC%20IP%20172.31.0.3.png?raw=true" alt="VPC IP Image" width="24%" />
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/VPC%20Server%20Specs.png?raw=true" alt="Server Specs 1" width="24%" />
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/VPC%20Server%20Specs.png?raw=true" alt="Server Specs 2" width="24%" />
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/VULTR%20VPC%20Creation.png?raw=true" alt="VULTR VPC Creation" width="24%" />
+</p>
+
+Cloud Infrastructure Setup
+
+To establish the lab environment, I first configured a VPC (Virtual Private Cloud) on VULTR, defining a custom IPv4 range to ensure proper network segmentation and control. I then provisioned a new virtual machine running Ubuntu 22.04, selecting the following specifications to support high-performance log ingestion and analysis:
+
+80 GB NVMe storage
+
+4 vCPUs
+
+16 GB RAM
+
+6 TB bandwidth
+
+The virtual machine was attached to the previously created VPC, providing a secure and scalable foundation for deploying the ELK stack and simulating real-world cyber attacks.
+<br>
+
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/repositories%20updated.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20Downloaded%20elastic%20search%20via%20CLI.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20Elastic%20search%20install%20confirmation%20and%20version.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20obtaining%20security%20auto%20configuration%20information%20.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20-Elastic%20Search%20.yml%20file.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20-%20Obtaining%20Public%20IP%20address%20149.248.61.82:23%20for%20elastic%20search%20instance.png?raw=true)
-![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203-Adding%20public%20IP%20address%20and%20http%20port.png?raw=true)
+Initial Server Configuration
+
+After provisioning the virtual server, I accessed it via SSH to begin the setup process. The first step was to update the system packages to ensure a secure and stable environment. I executed the following command to update and upgrade all system repositories:
+sudo apt-get update && sudo apt-get upgrade -y
+With the system fully updated, the server was ready for the installation and configuration of Elasticsearch, the first component of the ELK stack.
+<br>
+
+<p align="center">
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20Downloaded%20elastic%20search%20via%20CLI.png?raw=true" alt="Downloaded Elasticsearch via CLI" width="32%" />
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20Elastic%20search%20install%20confirmation%20and%20version.png?raw=true" alt="Elasticsearch Installation Confirmation" width="32%" />
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20obtaining%20security%20auto%20configuration%20information%20.png?raw=true" alt="Security Auto Configuration Info" width="32%" />
+</p>
+
+Elasticsearch Installation and Configuration
+
+To begin setting up the ELK stack, I installed Elasticsearch on my Ubuntu virtual machine. I navigated to the official Elasticsearch downloads page, selected the appropriate .deb package for x86_64 architecture, and copied the download link.
+Using PowerShell and wget, I initiated the download directly onto the server:
+wget elasticsearch-8.15.0-amd64.deb After confirming the successful download with the ls command, I proceeded with the installation: At the time of this project, version 8.15 of Elasticsearch was the latest available. Upon installation, Elasticsearch automatically generated security configuration details, including the superuser password and enrollment tokens. I securely stored this information for use in securing the stack and enabling authentication features.
+This marked the foundation for configuring the rest of the ELK stack, beginning with fine-tuning the elasticsearch.yml file and setting up network access.
+
+<Br>
+
+<p align="center">
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20-Elastic%20Search%20.yml%20file.png?raw=true" alt="Elasticsearch YAML Configuration" width="32%" />
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203%20-%20Obtaining%20Public%20IP%20address%20149.248.61.82:23%20for%20elastic%20search%20instance.png?raw=true" alt="Obtaining Public IP" width="32%" />
+  <img src="https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%203-Adding%20public%20IP%20address%20and%20http%20port.png?raw=true" alt="Public IP and Port Configuration" width="32%" />
+</p>
+
+
+
+
+
+
+
+
+
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%204%20-%20Creating%20a%20firewall%20group.png?raw=true)
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%204-%20Starting%20up%20elastic%20search%20service.png?raw=true)
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%204%20-%20Downloading%20Kibana%20via%20CLI.png?raw=true)
@@ -121,72 +184,6 @@ I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticse
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20sucessfully%20logged%20in%20to%20Mytic%20server.png?raw=true)
 ![image alt](https://github.com/TylerTweedie/MyDFIR-SOC-analyst/blob/main/Day%2020%20-%20Mythic%20Dashboard.png?raw=true)
 
-## Introduction
-
-In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
-
-- SecurityEvent (Windows Event Logs)
-- Syslog (Linux Event Logs)
-- SecurityAlert (Log Analytics Alerts Triggered)
-- SecurityIncident (Incidents created by Sentinel)
-- AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
-
-## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
-
-## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
-
-The architecture of the mini honeynet in Azure consists of the following components:
-
-- Virtual Network (VNet)
-- Network Security Group (NSG)
-- Virtual Machines (2 windows, 1 linux)
-- Log Analytics Workspace
-- Azure Key Vault
-- Azure Storage Account
-- Microsoft Sentinel
-
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
-
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
-
-## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
-
-## Metrics Before Hardening / Security Controls
-
-The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
-
-| Metric                   | Count
-| ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
-
-## Attack Maps Before Hardening / Security Controls
-
-```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
-
-## Metrics After Hardening / Security Controls
-
-The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
-
-| Metric                   | Count
-| ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
-| SecurityAlert            | 0
-| SecurityIncident         | 0
-| AzureNetworkAnalytics_CL | 0
 
 ## Conclusion
 
