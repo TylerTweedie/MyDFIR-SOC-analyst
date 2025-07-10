@@ -16,7 +16,7 @@ Tools and technologies used included Ubuntu, Kali Linux, VMware, VULTR, Syslog, 
 
 ## Objective
 
-I completed a 30-day SOC Analyst Challenge where I used the ELK stack (Elasticsearch, Logstash, and Kibana) to analyze and investigate logs from a virtual machine. Throughout the challenge, I identified and examined various simulated cyber attacks, gaining hands-on experience in threat detection, log correlation, and incident response within a SIEM environment.
+I used the ELK stack (Elasticsearch, Logstash, and Kibana) to analyze and investigate logs from a virtual machine. Throughout the challenge, I identified and examined various simulated cyber attacks, gaining hands-on experience in threat detection, log correlation, and incident response within a SIEM environment.
 
 <br>
 
